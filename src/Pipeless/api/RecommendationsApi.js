@@ -14,11 +14,6 @@
 
 import ApiClient from "../ApiClient";
 import Errors from '../model/Errors';
-import InlineObject10 from '../model/InlineObject10';
-import InlineObject11 from '../model/InlineObject11';
-import InlineObject12 from '../model/InlineObject12';
-import InlineObject13 from '../model/InlineObject13';
-import InlineObject14 from '../model/InlineObject14';
 import RecommendationsResult from '../model/RecommendationsResult';
 
 /**
@@ -52,13 +47,12 @@ export default class RecommendationsApi {
      * Get Recommended Content (for user)
      * @param {String} appId 
      * @param {Object} opts Optional parameters
-     * @param {module:Pipeless/model/InlineObject10} opts.inlineObject10 
      * @param {module:Pipeless/api/RecommendationsApi~getRecommendedContentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Pipeless/model/RecommendationsResult}
      */
     getRecommendedContent(appId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject10'];
+      let postBody = opts;
       // verify the required parameter 'appId' is set
       if (appId === undefined || appId === null) {
         throw new Error("Missing the required parameter 'appId' when calling getRecommendedContent");
@@ -79,7 +73,7 @@ export default class RecommendationsApi {
       let accepts = ['application/json'];
       let returnType = RecommendationsResult;
       return this.apiClient.callApi(
-        '/v1/apps/{app_id}/algos/recommendations/content', 'GET',
+        '/v1/apps/{app_id}/algos/recommendations/content', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -98,13 +92,12 @@ export default class RecommendationsApi {
      * For a given user (or any object type), get a list of recommended users for the target user to follow, based on their behavior/tastes.
      * @param {String} appId 
      * @param {Object} opts Optional parameters
-     * @param {module:Pipeless/model/InlineObject11} opts.inlineObject11 
      * @param {module:Pipeless/api/RecommendationsApi~getRecommendedUsersToFollowCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Pipeless/model/RecommendationsResult}
      */
     getRecommendedUsersToFollow(appId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject11'];
+      let postBody = opts;
       // verify the required parameter 'appId' is set
       if (appId === undefined || appId === null) {
         throw new Error("Missing the required parameter 'appId' when calling getRecommendedUsersToFollow");
@@ -125,7 +118,7 @@ export default class RecommendationsApi {
       let accepts = ['application/json'];
       let returnType = RecommendationsResult;
       return this.apiClient.callApi(
-        '/v1/apps/{app_id}/algos/recommendations/users-to-follow', 'GET',
+        '/v1/apps/{app_id}/algos/recommendations/users-to-follow', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -144,13 +137,12 @@ export default class RecommendationsApi {
      * Gets related content objects based on a specific piece of content of any type.
      * @param {String} appId 
      * @param {Object} opts Optional parameters
-     * @param {module:Pipeless/model/InlineObject13} opts.inlineObject13 
      * @param {module:Pipeless/api/RecommendationsApi~getRelatedContentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Pipeless/model/RecommendationsResult}
      */
     getRelatedContent(appId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject13'];
+      let postBody = opts;
       // verify the required parameter 'appId' is set
       if (appId === undefined || appId === null) {
         throw new Error("Missing the required parameter 'appId' when calling getRelatedContent");
@@ -171,7 +163,7 @@ export default class RecommendationsApi {
       let accepts = ['application/json'];
       let returnType = RecommendationsResult;
       return this.apiClient.callApi(
-        '/v1/apps/{app_id}/algos/recommendations/related-content', 'GET',
+        '/v1/apps/{app_id}/algos/recommendations/related-content', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -190,13 +182,12 @@ export default class RecommendationsApi {
      * Gets related tags for a given tag (or any other object type, ex. category).
      * @param {String} appId 
      * @param {Object} opts Optional parameters
-     * @param {module:Pipeless/model/InlineObject12} opts.inlineObject12 
      * @param {module:Pipeless/api/RecommendationsApi~getRelatedTagsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Pipeless/model/RecommendationsResult}
      */
     getRelatedTags(appId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject12'];
+      let postBody = opts;
       // verify the required parameter 'appId' is set
       if (appId === undefined || appId === null) {
         throw new Error("Missing the required parameter 'appId' when calling getRelatedTags");
@@ -217,7 +208,7 @@ export default class RecommendationsApi {
       let accepts = ['application/json'];
       let returnType = RecommendationsResult;
       return this.apiClient.callApi(
-        '/v1/apps/{app_id}/algos/recommendations/related-tags', 'GET',
+        '/v1/apps/{app_id}/algos/recommendations/related-tags', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -236,13 +227,12 @@ export default class RecommendationsApi {
      * Get related users based on a target user (or other type).
      * @param {String} appId 
      * @param {Object} opts Optional parameters
-     * @param {module:Pipeless/model/InlineObject14} opts.inlineObject14 
      * @param {module:Pipeless/api/RecommendationsApi~getRelatedUsersCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Pipeless/model/RecommendationsResult}
      */
     getRelatedUsers(appId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject14'];
+      let postBody = opts;
       // verify the required parameter 'appId' is set
       if (appId === undefined || appId === null) {
         throw new Error("Missing the required parameter 'appId' when calling getRelatedUsers");
@@ -263,7 +253,7 @@ export default class RecommendationsApi {
       let accepts = ['application/json'];
       let returnType = RecommendationsResult;
       return this.apiClient.callApi(
-        '/v1/apps/{app_id}/algos/recommendations/related-users', 'GET',
+        '/v1/apps/{app_id}/algos/recommendations/related-users', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

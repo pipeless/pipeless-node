@@ -25,15 +25,11 @@ import Pipeless from 'pipeless';
 let defaultClient = Pipeless.ApiClient.instance;
 // Configure API key authorization: App_API_Key
 let App_API_Key = defaultClient.authentications['App_API_Key'];
-App_API_Key.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//App_API_Key.apiKeyPrefix = 'Token';
+App_API_Key.apiKey = 'Bearer YOUR_API_KEY';
 
 let apiInstance = new Pipeless.RecommendationsApi();
 let appId = "'123'"; // String | 
-let opts = {
-  'inlineObject10': new Pipeless.InlineObject10() // InlineObject10 | 
-};
+let opts = {};
 apiInstance.getRecommendedContent(appId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -48,8 +44,8 @@ apiInstance.getRecommendedContent(appId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  | [default to &#39;123&#39;]
- **inlineObject10** | [**InlineObject10**](InlineObject10.md)|  | [optional] 
+ **appId** | **String**|  | [your app id]
+ **opts** | **Object** |  | [optional]
 
 ### Return type
 
@@ -80,15 +76,11 @@ import Pipeless from 'pipeless';
 let defaultClient = Pipeless.ApiClient.instance;
 // Configure API key authorization: App_API_Key
 let App_API_Key = defaultClient.authentications['App_API_Key'];
-App_API_Key.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//App_API_Key.apiKeyPrefix = 'Token';
+App_API_Key.apiKey = 'Bearer YOUR_API_KEY';
 
 let apiInstance = new Pipeless.RecommendationsApi();
 let appId = "'123'"; // String | 
-let opts = {
-  'inlineObject11': new Pipeless.InlineObject11() // InlineObject11 | 
-};
+let opts = {};
 apiInstance.getRecommendedUsersToFollow(appId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -103,8 +95,8 @@ apiInstance.getRecommendedUsersToFollow(appId, opts, (error, data, response) => 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  | [default to &#39;123&#39;]
- **inlineObject11** | [**InlineObject11**](InlineObject11.md)|  | [optional] 
+ **appId** | **String**|  | [your app id]
+ **opts** | **Object** |  | [optional]
 
 ### Return type
 
@@ -135,15 +127,11 @@ import Pipeless from 'pipeless';
 let defaultClient = Pipeless.ApiClient.instance;
 // Configure API key authorization: App_API_Key
 let App_API_Key = defaultClient.authentications['App_API_Key'];
-App_API_Key.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//App_API_Key.apiKeyPrefix = 'Token';
+App_API_Key.apiKey = 'Bearer YOUR_API_KEY';
 
 let apiInstance = new Pipeless.RecommendationsApi();
 let appId = "'123'"; // String | 
-let opts = {
-  'inlineObject13': new Pipeless.InlineObject13() // InlineObject13 | 
-};
+let opts = {};
 apiInstance.getRelatedContent(appId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -158,8 +146,8 @@ apiInstance.getRelatedContent(appId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  | [default to &#39;123&#39;]
- **inlineObject13** | [**InlineObject13**](InlineObject13.md)|  | [optional] 
+ **appId** | **String**|  | [your app id]
+ **opts** | **Object** |  | [optional]
 
 ### Return type
 
@@ -190,15 +178,11 @@ import Pipeless from 'pipeless';
 let defaultClient = Pipeless.ApiClient.instance;
 // Configure API key authorization: App_API_Key
 let App_API_Key = defaultClient.authentications['App_API_Key'];
-App_API_Key.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//App_API_Key.apiKeyPrefix = 'Token';
+App_API_Key.apiKey = 'Bearer YOUR_API_KEY';
 
 let apiInstance = new Pipeless.RecommendationsApi();
 let appId = "'123'"; // String | 
-let opts = {
-  'inlineObject12': new Pipeless.InlineObject12() // InlineObject12 | 
-};
+let opts = {};
 apiInstance.getRelatedTags(appId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -213,8 +197,8 @@ apiInstance.getRelatedTags(appId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  | [default to &#39;123&#39;]
- **inlineObject12** | [**InlineObject12**](InlineObject12.md)|  | [optional] 
+ **appId** | **String**|  | [your app id]
+ **opts** | **Object** |  | [optional]
 
 ### Return type
 
@@ -245,15 +229,11 @@ import Pipeless from 'pipeless';
 let defaultClient = Pipeless.ApiClient.instance;
 // Configure API key authorization: App_API_Key
 let App_API_Key = defaultClient.authentications['App_API_Key'];
-App_API_Key.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//App_API_Key.apiKeyPrefix = 'Token';
+App_API_Key.apiKey = 'Bearer YOUR_API_KEY';
 
 let apiInstance = new Pipeless.RecommendationsApi();
 let appId = "'123'"; // String | 
-let opts = {
-  'inlineObject14': new Pipeless.InlineObject14() // InlineObject14 | 
-};
+let opts = {};
 apiInstance.getRelatedUsers(appId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -268,8 +248,8 @@ apiInstance.getRelatedUsers(appId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  | [default to &#39;123&#39;]
- **inlineObject14** | [**InlineObject14**](InlineObject14.md)|  | [optional] 
+ **appId** | **String**|  | [your app id]
+ **opts** | **Object** |  | [optional]
 
 ### Return type
 

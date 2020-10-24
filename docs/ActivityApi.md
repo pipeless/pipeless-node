@@ -25,15 +25,11 @@ import Pipeless from 'pipeless';
 let defaultClient = Pipeless.ApiClient.instance;
 // Configure API key authorization: App_API_Key
 let App_API_Key = defaultClient.authentications['App_API_Key'];
-App_API_Key.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//App_API_Key.apiKeyPrefix = 'Token';
+App_API_Key.apiKey = 'Bearer YOUR_API_KEY';
 
 let apiInstance = new Pipeless.ActivityApi();
 let appId = 123; // Number | 
-let opts = {
-  'inlineObject8': new Pipeless.InlineObject8() // InlineObject8 | 
-};
+let opts = {};
 apiInstance.getActivityActionsFeed(appId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -48,8 +44,8 @@ apiInstance.getActivityActionsFeed(appId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **Number**|  | [default to 123]
- **inlineObject8** | [**InlineObject8**](InlineObject8.md)|  | [optional] 
+ **appId** | **Number**|  | [your app id]
+ **opts** | **Object** |  | [optional]
 
 ### Return type
 
@@ -80,15 +76,11 @@ import Pipeless from 'pipeless';
 let defaultClient = Pipeless.ApiClient.instance;
 // Configure API key authorization: App_API_Key
 let App_API_Key = defaultClient.authentications['App_API_Key'];
-App_API_Key.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//App_API_Key.apiKeyPrefix = 'Token';
+App_API_Key.apiKey = 'Bearer YOUR_API_KEY';
 
 let apiInstance = new Pipeless.ActivityApi();
 let appId = 123; // Number | 
-let opts = {
-  'inlineObject7': new Pipeless.InlineObject7() // InlineObject7 | 
-};
+let opts = {};
 apiInstance.getActivityFeed(appId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -103,8 +95,8 @@ apiInstance.getActivityFeed(appId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **Number**|  | [default to 123]
- **inlineObject7** | [**InlineObject7**](InlineObject7.md)|  | [optional] 
+ **appId** | **Number**|  | [your app id]
+ **opts** | **Object** |  | [optional]
 
 ### Return type
 
@@ -135,15 +127,11 @@ import Pipeless from 'pipeless';
 let defaultClient = Pipeless.ApiClient.instance;
 // Configure API key authorization: App_API_Key
 let App_API_Key = defaultClient.authentications['App_API_Key'];
-App_API_Key.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//App_API_Key.apiKeyPrefix = 'Token';
+App_API_Key.apiKey = 'Bearer YOUR_API_KEY';
 
 let apiInstance = new Pipeless.ActivityApi();
 let appId = 123; // Number | 
-let opts = {
-  'inlineObject6': new Pipeless.InlineObject6() // InlineObject6 | 
-};
+let opts = {};
 apiInstance.getActivityOnObject(appId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -158,8 +146,8 @@ apiInstance.getActivityOnObject(appId, opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **Number**|  | [default to 123]
- **inlineObject6** | [**InlineObject6**](InlineObject6.md)|  | [optional] 
+ **appId** | **Number**|  | [your app id]
+ **opts** | **Object** |  | [optional]
 
 ### Return type
 

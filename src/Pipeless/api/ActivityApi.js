@@ -17,9 +17,6 @@ import Errors from '../model/Errors';
 import GetActivityActionsFeedResult from '../model/GetActivityActionsFeedResult';
 import GetActivityFeedResult from '../model/GetActivityFeedResult';
 import GetActivityOnObjectResult from '../model/GetActivityOnObjectResult';
-import InlineObject6 from '../model/InlineObject6';
-import InlineObject7 from '../model/InlineObject7';
-import InlineObject8 from '../model/InlineObject8';
 
 /**
 * Activity service.
@@ -53,13 +50,12 @@ export default class ActivityApi {
      * Fetch the activity feed for a user (or any other object type). This activity feed format will return acted upon entities as the main result. Ex. one item per post, article, product, etc. Each single item has associated actions. Ex. product a product
      * @param {Number} appId 
      * @param {Object} opts Optional parameters
-     * @param {module:Pipeless/model/InlineObject8} opts.inlineObject8 
      * @param {module:Pipeless/api/ActivityApi~getActivityActionsFeedCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Pipeless/model/GetActivityActionsFeedResult}
      */
     getActivityActionsFeed(appId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject8'];
+      let postBody = opts;
       // verify the required parameter 'appId' is set
       if (appId === undefined || appId === null) {
         throw new Error("Missing the required parameter 'appId' when calling getActivityActionsFeed");
@@ -80,7 +76,7 @@ export default class ActivityApi {
       let accepts = ['application/json'];
       let returnType = GetActivityActionsFeedResult;
       return this.apiClient.callApi(
-        '/v1/apps/{app_id}/algos/activity/actions-feed', 'GET',
+        '/v1/apps/{app_id}/algos/activity/actions-feed', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -99,13 +95,12 @@ export default class ActivityApi {
      * Fetch the activity feed for a user (or any other object type). This activity feed format will return events in sequential descending order - there will be one activity item for each found action.
      * @param {Number} appId 
      * @param {Object} opts Optional parameters
-     * @param {module:Pipeless/model/InlineObject7} opts.inlineObject7 
      * @param {module:Pipeless/api/ActivityApi~getActivityFeedCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Pipeless/model/GetActivityFeedResult}
      */
     getActivityFeed(appId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject7'];
+      let postBody = opts;
       // verify the required parameter 'appId' is set
       if (appId === undefined || appId === null) {
         throw new Error("Missing the required parameter 'appId' when calling getActivityFeed");
@@ -126,7 +121,7 @@ export default class ActivityApi {
       let accepts = ['application/json'];
       let returnType = GetActivityFeedResult;
       return this.apiClient.callApi(
-        '/v1/apps/{app_id}/algos/activity/feed', 'GET',
+        '/v1/apps/{app_id}/algos/activity/feed', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -145,13 +140,12 @@ export default class ActivityApi {
      * Get activity that has taken place on a target object.
      * @param {Number} appId 
      * @param {Object} opts Optional parameters
-     * @param {module:Pipeless/model/InlineObject6} opts.inlineObject6 
      * @param {module:Pipeless/api/ActivityApi~getActivityOnObjectCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Pipeless/model/GetActivityOnObjectResult}
      */
     getActivityOnObject(appId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject6'];
+      let postBody = opts;
       // verify the required parameter 'appId' is set
       if (appId === undefined || appId === null) {
         throw new Error("Missing the required parameter 'appId' when calling getActivityOnObject");
@@ -172,7 +166,7 @@ export default class ActivityApi {
       let accepts = ['application/json'];
       let returnType = GetActivityOnObjectResult;
       return this.apiClient.callApi(
-        '/v1/apps/{app_id}/algos/activity/object', 'GET',
+        '/v1/apps/{app_id}/algos/activity/object', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

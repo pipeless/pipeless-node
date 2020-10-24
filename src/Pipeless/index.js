@@ -13,7 +13,6 @@
 
 
 import ApiClient from './ApiClient';
-import ActivityFeedLookup from './model/ActivityFeedLookup';
 import Errors from './model/Errors';
 import GetActivityActionsFeedResult from './model/GetActivityActionsFeedResult';
 import GetActivityActionsFeedResultActions from './model/GetActivityActionsFeedResultActions';
@@ -25,26 +24,8 @@ import GetActivityOnObjectResultEvents from './model/GetActivityOnObjectResultEv
 import GetRecentEventsConfig from './model/GetRecentEventsConfig';
 import GetRecentEventsResultItem from './model/GetRecentEventsResultItem';
 import GetRecentEventsResultItemEvent from './model/GetRecentEventsResultItemEvent';
-import InlineObject from './model/InlineObject';
-import InlineObject1 from './model/InlineObject1';
-import InlineObject10 from './model/InlineObject10';
-import InlineObject11 from './model/InlineObject11';
-import InlineObject12 from './model/InlineObject12';
-import InlineObject13 from './model/InlineObject13';
-import InlineObject14 from './model/InlineObject14';
-import InlineObject2 from './model/InlineObject2';
-import InlineObject3 from './model/InlineObject3';
-import InlineObject4 from './model/InlineObject4';
-import InlineObject5 from './model/InlineObject5';
-import InlineObject6 from './model/InlineObject6';
-import InlineObject7 from './model/InlineObject7';
-import InlineObject8 from './model/InlineObject8';
-import InlineObject9 from './model/InlineObject9';
-import ObjectLookup from './model/ObjectLookup';
 import ObjectReadable from './model/ObjectReadable';
 import ObjectType from './model/ObjectType';
-import ObjectWildcardLookup from './model/ObjectWildcardLookup';
-import ObjectWriteable from './model/ObjectWriteable';
 import PageInfo from './model/PageInfo';
 import RecommendationsResult from './model/RecommendationsResult';
 import RecommendationsResultItems from './model/RecommendationsResultItems';
@@ -52,11 +33,6 @@ import RelationshipDirection from './model/RelationshipDirection';
 import RelationshipReadable from './model/RelationshipReadable';
 import RelationshipType from './model/RelationshipType';
 import RelationshipWriteable from './model/RelationshipWriteable';
-import V1AppsAppIdEventsBatchEvents from './model/V1AppsAppIdEventsBatchEvents';
-import V1AppsAppIdEventsEvent from './model/V1AppsAppIdEventsEvent';
-import V1AppsAppIdEventsEvent1 from './model/V1AppsAppIdEventsEvent1';
-import V1AppsAppIdEventsEvent1Relationship from './model/V1AppsAppIdEventsEvent1Relationship';
-import V1AppsAppIdObjectsNewProps from './model/V1AppsAppIdObjectsNewProps';
 import ActivityApi from './api/ActivityApi';
 import GeneralApi from './api/GeneralApi';
 import RecommendationsApi from './api/RecommendationsApi';
@@ -99,12 +75,6 @@ export {
      * @property {module:Pipeless/ApiClient}
      */
     ApiClient,
-
-    /**
-     * The ActivityFeedLookup model constructor.
-     * @property {module:Pipeless/model/ActivityFeedLookup}
-     */
-    ActivityFeedLookup,
 
     /**
      * The Errors model constructor.
@@ -173,102 +143,6 @@ export {
     GetRecentEventsResultItemEvent,
 
     /**
-     * The InlineObject model constructor.
-     * @property {module:Pipeless/model/InlineObject}
-     */
-    InlineObject,
-
-    /**
-     * The InlineObject1 model constructor.
-     * @property {module:Pipeless/model/InlineObject1}
-     */
-    InlineObject1,
-
-    /**
-     * The InlineObject10 model constructor.
-     * @property {module:Pipeless/model/InlineObject10}
-     */
-    InlineObject10,
-
-    /**
-     * The InlineObject11 model constructor.
-     * @property {module:Pipeless/model/InlineObject11}
-     */
-    InlineObject11,
-
-    /**
-     * The InlineObject12 model constructor.
-     * @property {module:Pipeless/model/InlineObject12}
-     */
-    InlineObject12,
-
-    /**
-     * The InlineObject13 model constructor.
-     * @property {module:Pipeless/model/InlineObject13}
-     */
-    InlineObject13,
-
-    /**
-     * The InlineObject14 model constructor.
-     * @property {module:Pipeless/model/InlineObject14}
-     */
-    InlineObject14,
-
-    /**
-     * The InlineObject2 model constructor.
-     * @property {module:Pipeless/model/InlineObject2}
-     */
-    InlineObject2,
-
-    /**
-     * The InlineObject3 model constructor.
-     * @property {module:Pipeless/model/InlineObject3}
-     */
-    InlineObject3,
-
-    /**
-     * The InlineObject4 model constructor.
-     * @property {module:Pipeless/model/InlineObject4}
-     */
-    InlineObject4,
-
-    /**
-     * The InlineObject5 model constructor.
-     * @property {module:Pipeless/model/InlineObject5}
-     */
-    InlineObject5,
-
-    /**
-     * The InlineObject6 model constructor.
-     * @property {module:Pipeless/model/InlineObject6}
-     */
-    InlineObject6,
-
-    /**
-     * The InlineObject7 model constructor.
-     * @property {module:Pipeless/model/InlineObject7}
-     */
-    InlineObject7,
-
-    /**
-     * The InlineObject8 model constructor.
-     * @property {module:Pipeless/model/InlineObject8}
-     */
-    InlineObject8,
-
-    /**
-     * The InlineObject9 model constructor.
-     * @property {module:Pipeless/model/InlineObject9}
-     */
-    InlineObject9,
-
-    /**
-     * The ObjectLookup model constructor.
-     * @property {module:Pipeless/model/ObjectLookup}
-     */
-    ObjectLookup,
-
-    /**
      * The ObjectReadable model constructor.
      * @property {module:Pipeless/model/ObjectReadable}
      */
@@ -279,18 +153,6 @@ export {
      * @property {module:Pipeless/model/ObjectType}
      */
     ObjectType,
-
-    /**
-     * The ObjectWildcardLookup model constructor.
-     * @property {module:Pipeless/model/ObjectWildcardLookup}
-     */
-    ObjectWildcardLookup,
-
-    /**
-     * The ObjectWriteable model constructor.
-     * @property {module:Pipeless/model/ObjectWriteable}
-     */
-    ObjectWriteable,
 
     /**
      * The PageInfo model constructor.
@@ -333,36 +195,6 @@ export {
      * @property {module:Pipeless/model/RelationshipWriteable}
      */
     RelationshipWriteable,
-
-    /**
-     * The V1AppsAppIdEventsBatchEvents model constructor.
-     * @property {module:Pipeless/model/V1AppsAppIdEventsBatchEvents}
-     */
-    V1AppsAppIdEventsBatchEvents,
-
-    /**
-     * The V1AppsAppIdEventsEvent model constructor.
-     * @property {module:Pipeless/model/V1AppsAppIdEventsEvent}
-     */
-    V1AppsAppIdEventsEvent,
-
-    /**
-     * The V1AppsAppIdEventsEvent1 model constructor.
-     * @property {module:Pipeless/model/V1AppsAppIdEventsEvent1}
-     */
-    V1AppsAppIdEventsEvent1,
-
-    /**
-     * The V1AppsAppIdEventsEvent1Relationship model constructor.
-     * @property {module:Pipeless/model/V1AppsAppIdEventsEvent1Relationship}
-     */
-    V1AppsAppIdEventsEvent1Relationship,
-
-    /**
-     * The V1AppsAppIdObjectsNewProps model constructor.
-     * @property {module:Pipeless/model/V1AppsAppIdObjectsNewProps}
-     */
-    V1AppsAppIdObjectsNewProps,
 
     /**
     * The ActivityApi service constructor.
