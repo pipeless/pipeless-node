@@ -16,13 +16,6 @@ import ApiClient from "../ApiClient";
 import Errors from '../model/Errors';
 import GetRecentEventsConfig from '../model/GetRecentEventsConfig';
 import GetRecentEventsResultItem from '../model/GetRecentEventsResultItem';
-import InlineObject from '../model/InlineObject';
-import InlineObject1 from '../model/InlineObject1';
-import InlineObject2 from '../model/InlineObject2';
-import InlineObject3 from '../model/InlineObject3';
-import InlineObject4 from '../model/InlineObject4';
-import InlineObject5 from '../model/InlineObject5';
-import InlineObject9 from '../model/InlineObject9';
 import ObjectReadable from '../model/ObjectReadable';
 
 /**
@@ -57,13 +50,12 @@ export default class GeneralApi {
      * Create a single event. 
      * @param {Number} appId 
      * @param {Object} opts Optional parameters
-     * @param {module:Pipeless/model/InlineObject} opts.inlineObject 
      * @param {module:Pipeless/api/GeneralApi~createEventCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     createEvent(appId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject'];
+      let postBody = opts;
       // verify the required parameter 'appId' is set
       if (appId === undefined || appId === null) {
         throw new Error("Missing the required parameter 'appId' when calling createEvent");
@@ -103,13 +95,12 @@ export default class GeneralApi {
      * Create up to 10 events in one API call.
      * @param {Number} appId 
      * @param {Object} opts Optional parameters
-     * @param {module:Pipeless/model/InlineObject2} opts.inlineObject2 
      * @param {module:Pipeless/api/GeneralApi~createEventsBatchCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     createEventsBatch(appId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject2'];
+      let postBody = opts;
       // verify the required parameter 'appId' is set
       if (appId === undefined || appId === null) {
         throw new Error("Missing the required parameter 'appId' when calling createEventsBatch");
@@ -149,13 +140,12 @@ export default class GeneralApi {
      * Delete all objects (and associated events) of a specific object type.
      * @param {Number} appId 
      * @param {Object} opts Optional parameters
-     * @param {module:Pipeless/model/InlineObject9} opts.inlineObject9 
      * @param {module:Pipeless/api/GeneralApi~deleteAllObjectsByTypeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     deleteAllObjectsByType(appId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject9'];
+      let postBody = opts;
       // verify the required parameter 'appId' is set
       if (appId === undefined || appId === null) {
         throw new Error("Missing the required parameter 'appId' when calling deleteAllObjectsByType");
@@ -195,13 +185,12 @@ export default class GeneralApi {
      * Delete one or more events.
      * @param {Number} appId 
      * @param {Object} opts Optional parameters
-     * @param {module:Pipeless/model/InlineObject1} opts.inlineObject1 
      * @param {module:Pipeless/api/GeneralApi~deleteEventCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     deleteEvent(appId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject1'];
+      let postBody = opts;
       // verify the required parameter 'appId' is set
       if (appId === undefined || appId === null) {
         throw new Error("Missing the required parameter 'appId' when calling deleteEvent");
@@ -241,13 +230,12 @@ export default class GeneralApi {
      * Delete a single object and all the relationships/events it's connected to.
      * @param {Number} appId 
      * @param {Object} opts Optional parameters
-     * @param {module:Pipeless/model/InlineObject4} opts.inlineObject4 
      * @param {module:Pipeless/api/GeneralApi~deleteObjectCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Object}
      */
     deleteObject(appId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject4'];
+      let postBody = opts;
       // verify the required parameter 'appId' is set
       if (appId === undefined || appId === null) {
         throw new Error("Missing the required parameter 'appId' when calling deleteObject");
@@ -287,13 +275,12 @@ export default class GeneralApi {
      * Edit the properties of an existing object.
      * @param {Number} appId 
      * @param {Object} opts Optional parameters
-     * @param {module:Pipeless/model/InlineObject5} opts.inlineObject5 
      * @param {module:Pipeless/api/GeneralApi~editObjectCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Pipeless/model/ObjectReadable}
      */
     editObject(appId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject5'];
+      let postBody = opts;
       // verify the required parameter 'appId' is set
       if (appId === undefined || appId === null) {
         throw new Error("Missing the required parameter 'appId' when calling editObject");
@@ -333,13 +320,12 @@ export default class GeneralApi {
      * Get basic info on a single object.
      * @param {Number} appId 
      * @param {Object} opts Optional parameters
-     * @param {module:Pipeless/model/InlineObject3} opts.inlineObject3 
      * @param {module:Pipeless/api/GeneralApi~getObjectCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Pipeless/model/ObjectReadable}
      */
     getObject(appId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['inlineObject3'];
+      let postBody = opts;
       // verify the required parameter 'appId' is set
       if (appId === undefined || appId === null) {
         throw new Error("Missing the required parameter 'appId' when calling getObject");
@@ -360,7 +346,7 @@ export default class GeneralApi {
       let accepts = ['application/json'];
       let returnType = ObjectReadable;
       return this.apiClient.callApi(
-        '/v1/apps/{app_id}/objects', 'GET',
+        '/v1/apps/{app_id}/objects', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -379,7 +365,6 @@ export default class GeneralApi {
      * Get recent events that have been sent to the specified app.
      * @param {Number} appId 
      * @param {Object} opts Optional parameters
-     * @param {module:Pipeless/model/GetRecentEventsConfig} opts.getRecentEventsConfig 
      * @param {module:Pipeless/api/GeneralApi~getRecentEventsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:Pipeless/model/GetRecentEventsResultItem>}
      */
@@ -406,7 +391,7 @@ export default class GeneralApi {
       let accepts = ['application/json'];
       let returnType = [GetRecentEventsResultItem];
       return this.apiClient.callApi(
-        '/v1/apps/{app_id}/recent-events', 'GET',
+        '/v1/apps/{app_id}/recent-events', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
