@@ -370,7 +370,7 @@ export default class GeneralApi {
      */
     getRecentEvents(appId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['getRecentEventsConfig'];
+      let postBody = opts;
       // verify the required parameter 'appId' is set
       if (appId === undefined || appId === null) {
         throw new Error("Missing the required parameter 'appId' when calling getRecentEvents");
