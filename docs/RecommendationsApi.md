@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## getRecommendedContent
 
-> RecommendationsResult getRecommendedContent(appId, opts)
+> RecommendationsContentResult getRecommendedContent(appId, opts)
 
 Get Recommended Content (for user)
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RecommendationsResult**](RecommendationsResult.md)
+[**RecommendationsContentResult**](RecommendationsContentResult.md)
 
 ### Authorization
 

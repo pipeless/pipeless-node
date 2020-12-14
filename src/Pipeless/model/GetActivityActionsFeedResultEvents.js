@@ -59,6 +59,9 @@ class GetActivityActionsFeedResultEvents {
             if (data.hasOwnProperty('actions')) {
                 obj['actions'] = ApiClient.convertToType(data['actions'], [GetActivityActionsFeedResultActions]);
             }
+            if (data.hasOwnProperty('cursor')) {
+                obj['cursor'] = ApiClient.convertToType(data['cursor'], 'String');
+            }
         }
         return obj;
     }
@@ -75,6 +78,11 @@ GetActivityActionsFeedResultEvents.prototype['action_object'] = undefined;
  * @member {Array.<module:Pipeless/model/GetActivityActionsFeedResultActions>} actions
  */
 GetActivityActionsFeedResultEvents.prototype['actions'] = undefined;
+
+/**
+ * @member {String} cursor
+ */
+GetActivityActionsFeedResultEvents.prototype['cursor'] = undefined;
 
 
 

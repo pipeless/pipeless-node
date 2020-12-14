@@ -27,6 +27,8 @@ import GetRecentEventsResultItemEvent from './model/GetRecentEventsResultItemEve
 import ObjectReadable from './model/ObjectReadable';
 import ObjectType from './model/ObjectType';
 import PageInfo from './model/PageInfo';
+import RecommendationsContentResult from './model/RecommendationsContentResult';
+import RecommendationsContentResultItems from './model/RecommendationsContentResultItems';
 import RecommendationsResult from './model/RecommendationsResult';
 import RecommendationsResultItems from './model/RecommendationsResultItems';
 import RelationshipCountsResult from './model/RelationshipCountsResult';
@@ -162,6 +164,18 @@ export {
      * @property {module:Pipeless/model/PageInfo}
      */
     PageInfo,
+
+    /**
+     * The RecommendationsContentResult model constructor.
+     * @property {module:Pipeless/model/RecommendationsContentResult}
+     */
+    RecommendationsContentResult,
+
+    /**
+     * The RecommendationsContentResultItems model constructor.
+     * @property {module:Pipeless/model/RecommendationsContentResultItems}
+     */
+    RecommendationsContentResultItems,
 
     /**
      * The RecommendationsResult model constructor.

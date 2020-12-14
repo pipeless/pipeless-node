@@ -14,6 +14,7 @@
 
 import ApiClient from "../ApiClient";
 import Errors from '../model/Errors';
+import RecommendationsContentResult from '../model/RecommendationsContentResult';
 import RecommendationsResult from '../model/RecommendationsResult';
 
 /**
@@ -39,7 +40,7 @@ export default class RecommendationsApi {
      * Callback function to receive the result of the getRecommendedContent operation.
      * @callback module:Pipeless/api/RecommendationsApi~getRecommendedContentCallback
      * @param {String} error Error message, if any.
-     * @param {module:Pipeless/model/RecommendationsResult} data The data returned by the service call.
+     * @param {module:Pipeless/model/RecommendationsContentResult} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -48,7 +49,7 @@ export default class RecommendationsApi {
      * @param {String} appId 
      * @param {Object} opts Optional parameters
      * @param {module:Pipeless/api/RecommendationsApi~getRecommendedContentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:Pipeless/model/RecommendationsResult}
+     * data is of type: {@link module:Pipeless/model/RecommendationsContentResult}
      */
     getRecommendedContent(appId, opts, callback) {
       opts = opts || {};
@@ -71,7 +72,7 @@ export default class RecommendationsApi {
       let authNames = ['App_API_Key'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = RecommendationsResult;
+      let returnType = RecommendationsContentResult;
       return this.apiClient.callApi(
         '/v1/apps/{app_id}/algos/recommendations/content', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
