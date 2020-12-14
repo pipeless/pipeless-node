@@ -27,9 +27,14 @@ import GetRecentEventsResultItemEvent from './model/GetRecentEventsResultItemEve
 import ObjectReadable from './model/ObjectReadable';
 import ObjectType from './model/ObjectType';
 import PageInfo from './model/PageInfo';
+import RecommendationsContentResult from './model/RecommendationsContentResult';
+import RecommendationsContentResultItems from './model/RecommendationsContentResultItems';
 import RecommendationsResult from './model/RecommendationsResult';
 import RecommendationsResultItems from './model/RecommendationsResultItems';
+import RelationshipCountsResult from './model/RelationshipCountsResult';
+import RelationshipCountsResultStats from './model/RelationshipCountsResultStats';
 import RelationshipDirection from './model/RelationshipDirection';
+import RelationshipExistsResult from './model/RelationshipExistsResult';
 import RelationshipReadable from './model/RelationshipReadable';
 import RelationshipType from './model/RelationshipType';
 import RelationshipWriteable from './model/RelationshipWriteable';
@@ -161,6 +166,18 @@ export {
     PageInfo,
 
     /**
+     * The RecommendationsContentResult model constructor.
+     * @property {module:Pipeless/model/RecommendationsContentResult}
+     */
+    RecommendationsContentResult,
+
+    /**
+     * The RecommendationsContentResultItems model constructor.
+     * @property {module:Pipeless/model/RecommendationsContentResultItems}
+     */
+    RecommendationsContentResultItems,
+
+    /**
      * The RecommendationsResult model constructor.
      * @property {module:Pipeless/model/RecommendationsResult}
      */
@@ -173,10 +190,28 @@ export {
     RecommendationsResultItems,
 
     /**
+     * The RelationshipCountsResult model constructor.
+     * @property {module:Pipeless/model/RelationshipCountsResult}
+     */
+    RelationshipCountsResult,
+
+    /**
+     * The RelationshipCountsResultStats model constructor.
+     * @property {module:Pipeless/model/RelationshipCountsResultStats}
+     */
+    RelationshipCountsResultStats,
+
+    /**
      * The RelationshipDirection model constructor.
      * @property {module:Pipeless/model/RelationshipDirection}
      */
     RelationshipDirection,
+
+    /**
+     * The RelationshipExistsResult model constructor.
+     * @property {module:Pipeless/model/RelationshipExistsResult}
+     */
+    RelationshipExistsResult,
 
     /**
      * The RelationshipReadable model constructor.

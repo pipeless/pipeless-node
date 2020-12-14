@@ -65,6 +65,9 @@ class GetActivityOnObjectResultEvents {
             if (data.hasOwnProperty('direction')) {
                 obj['direction'] = RelationshipDirection.constructFromObject(data['direction']);
             }
+            if (data.hasOwnProperty('cursor')) {
+                obj['cursor'] = ApiClient.convertToType(data['cursor'], 'String');
+            }
         }
         return obj;
     }
@@ -86,6 +89,11 @@ GetActivityOnObjectResultEvents.prototype['relationship'] = undefined;
  * @member {module:Pipeless/model/RelationshipDirection} direction
  */
 GetActivityOnObjectResultEvents.prototype['direction'] = undefined;
+
+/**
+ * @member {String} cursor
+ */
+GetActivityOnObjectResultEvents.prototype['cursor'] = undefined;
 
 
 

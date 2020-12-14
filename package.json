@@ -1,6 +1,6 @@
 {
   "name": "pipeless",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "JS client for the Pipeless API",
   "license": "MIT",
   "main": "dist/Pipeless/index.js",

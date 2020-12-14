@@ -17,6 +17,8 @@ import Errors from '../model/Errors';
 import GetRecentEventsConfig from '../model/GetRecentEventsConfig';
 import GetRecentEventsResultItem from '../model/GetRecentEventsResultItem';
 import ObjectReadable from '../model/ObjectReadable';
+import RelationshipCountsResult from '../model/RelationshipCountsResult';
+import RelationshipExistsResult from '../model/RelationshipExistsResult';
 
 /**
 * General service.
@@ -370,7 +372,7 @@ export default class GeneralApi {
      */
     getRecentEvents(appId, opts, callback) {
       opts = opts || {};
-      let postBody = opts['getRecentEventsConfig'];
+      let postBody = opts;
       // verify the required parameter 'appId' is set
       if (appId === undefined || appId === null) {
         throw new Error("Missing the required parameter 'appId' when calling getRecentEvents");
@@ -392,6 +394,96 @@ export default class GeneralApi {
       let returnType = [GetRecentEventsResultItem];
       return this.apiClient.callApi(
         '/v1/apps/{app_id}/recent-events', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getRelationshipCounts operation.
+     * @callback module:Pipeless/api/GeneralApi~getRelationshipCountsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Pipeless/model/RelationshipCountsResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get Relationship Counts
+     * Get the counts of 1 or 2 relationships from/to a given object.
+     * @param {String} appId 
+     * @param {Object} opts Optional parameters
+     * @param {module:Pipeless/api/GeneralApi~getRelationshipCountsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Pipeless/model/RelationshipCountsResult}
+     */
+    getRelationshipCounts(appId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts;
+      // verify the required parameter 'appId' is set
+      if (appId === undefined || appId === null) {
+        throw new Error("Missing the required parameter 'appId' when calling getRelationshipCounts");
+      }
+
+      let pathParams = {
+        'app_id': appId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['App_API_Key'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = RelationshipCountsResult;
+      return this.apiClient.callApi(
+        '/v1/apps/{app_id}/relationship-counts', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getRelationshipExists operation.
+     * @callback module:Pipeless/api/GeneralApi~getRelationshipExistsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Pipeless/model/RelationshipExistsResult} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get Relationship Exists
+     * Determines if a given relationship of a specific type exists from the specified object to the specified end object.
+     * @param {String} appId 
+     * @param {Object} opts Optional parameters
+     * @param {module:Pipeless/api/GeneralApi~getRelationshipExistsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Pipeless/model/RelationshipExistsResult}
+     */
+    getRelationshipExists(appId, opts, callback) {
+      opts = opts || {};
+      let postBody = opts;
+      // verify the required parameter 'appId' is set
+      if (appId === undefined || appId === null) {
+        throw new Error("Missing the required parameter 'appId' when calling getRelationshipExists");
+      }
+
+      let pathParams = {
+        'app_id': appId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['App_API_Key'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = RelationshipExistsResult;
+      return this.apiClient.callApi(
+        '/v1/apps/{app_id}/relationship-exists', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

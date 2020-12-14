@@ -12,6 +12,8 @@ Method | HTTP request | Description
 [**editObject**](GeneralApi.md#editObject) | **PATCH** /v1/apps/{app_id}/objects | Edit Object
 [**getObject**](GeneralApi.md#getObject) | **GET** /v1/apps/{app_id}/objects | Get Object
 [**getRecentEvents**](GeneralApi.md#getRecentEvents) | **GET** /v1/apps/{app_id}/recent-events | Get Recent Events
+[**getRelationshipCounts**](GeneralApi.md#getRelationshipCounts) | **GET** /v1/apps/{app_id}/relationship-counts | Get Relationship Counts
+[**getRelationshipExists**](GeneralApi.md#getRelationshipExists) | **GET** /v1/apps/{app_id}/relationship-exists | Get Relationship Exists
 
 
 
@@ -412,6 +414,108 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[GetRecentEventsResultItem]**](GetRecentEventsResultItem.md)
+
+### Authorization
+
+[App_API_Key](../README.md#App_API_Key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## getRelationshipCounts
+
+> RelationshipCountsResult getRelationshipCounts(appId, opts)
+
+Get Relationship Counts
+
+Get the counts of 1 or 2 relationships from/to a given object.
+
+### Example
+
+```javascript
+import Pipeless from 'pipeless';
+let defaultClient = Pipeless.ApiClient.instance;
+// Configure API key authorization: App_API_Key
+let App_API_Key = defaultClient.authentications['App_API_Key'];
+App_API_Key.apiKey = 'Bearer YOUR_API_KEY';
+
+let apiInstance = new Pipeless.GeneralApi();
+let appId = "'123'"; // String | 
+let opts = {};
+apiInstance.getRelationshipCounts(appId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  | [your app id]
+ **opts** | **Object** |  | [optional]
+
+### Return type
+
+[**RelationshipCountsResult**](RelationshipCountsResult.md)
+
+### Authorization
+
+[App_API_Key](../README.md#App_API_Key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## getRelationshipExists
+
+> RelationshipExistsResult getRelationshipExists(appId, opts)
+
+Get Relationship Exists
+
+Determines if a given relationship of a specific type exists from the specified object to the specified end object.
+
+### Example
+
+```javascript
+import Pipeless from 'pipeless';
+let defaultClient = Pipeless.ApiClient.instance;
+// Configure API key authorization: App_API_Key
+let App_API_Key = defaultClient.authentications['App_API_Key'];
+App_API_Key.apiKey = 'Bearer YOUR_API_KEY';
+
+let apiInstance = new Pipeless.GeneralApi();
+let appId = "'123'"; // String | 
+let opts = {};
+apiInstance.getRelationshipExists(appId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  | [your app id]
+ **opts** | **Object** |  | [optional]
+
+### Return type
+
+[**RelationshipExistsResult**](RelationshipExistsResult.md)
 
 ### Authorization
 

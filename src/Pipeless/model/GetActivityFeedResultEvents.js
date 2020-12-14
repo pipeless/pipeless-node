@@ -64,6 +64,9 @@ class GetActivityFeedResultEvents {
             if (data.hasOwnProperty('action_object')) {
                 obj['action_object'] = ObjectReadable.constructFromObject(data['action_object']);
             }
+            if (data.hasOwnProperty('cursor')) {
+                obj['cursor'] = ApiClient.convertToType(data['cursor'], 'String');
+            }
         }
         return obj;
     }
@@ -85,6 +88,11 @@ GetActivityFeedResultEvents.prototype['action_relationship'] = undefined;
  * @member {module:Pipeless/model/ObjectReadable} action_object
  */
 GetActivityFeedResultEvents.prototype['action_object'] = undefined;
+
+/**
+ * @member {String} cursor
+ */
+GetActivityFeedResultEvents.prototype['cursor'] = undefined;
 
 
 
